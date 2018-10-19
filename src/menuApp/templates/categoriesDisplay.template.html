@@ -1,0 +1,10 @@
+<div class="container">
+    <br/>
+    <ul class="categoriesDisplay">
+        <li ng-repeat="category in $ctrl.categories" ui-sref="menuCategories.menuItems( { itemId: $index } )">
+            <span id="categoryName">{{ category.name }}</span> <span id="short_name">({{ category.short_name }})</span>
+        </li>
+    </ul>
+
+    <ui-view></ui-view>
+</div>

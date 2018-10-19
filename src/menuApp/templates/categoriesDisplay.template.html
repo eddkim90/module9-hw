@@ -1,7 +1,7 @@
 <div class="container">
     <br/>
     <ul class="list-group row">
-        <li class="list-group-item col-xs-4" ng-repeat="category in $ctrl.categories" ui-sref="menuCategories.menuItems( { itemId: $index } )">
+        <li class="list-group-item col-xs-3" ng-repeat="category in $ctrl.categories" ui-sref="menuCategories.menuItems( { itemId: $index } )">
             <span id="categoryName">{{ category.name }}</span> <span id="short_name">({{ category.short_name }})</span>
         </li>
     </ul>

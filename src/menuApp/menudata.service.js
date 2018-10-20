@@ -28,7 +28,9 @@
             return $http({
                 method: "GET",
                 url: (ApiBasePath + "/menu_items.json"),
-                params: categoryShortName
+                params: {
+                    category: categoryShortName
+                }
             }).then(function(result) {
                 items = result.data;
                 return items;

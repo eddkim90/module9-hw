@@ -1,9 +1,19 @@
-<div class="container">
-    <br/>
-    <a ui-sref="home">Home</a> &lt;
-    <a ui-sref="menuCategories">Categories</a> &lt;
-    <span>Test</span>
+<br/>
+<a ui-sref="home">Home</a> &lt;
+<a ui-sref="menuCategories">Categories</a> &lt;
+<span>{{menuItems.name}} List</span>
 
+<h3>{{menuItems.name}} Section</h3>
 
-    <h1>Hello!</h1>
-</div>
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="item in menuItems.menuItems">
+        <strong>NAME:</strong> {{item.name}}
+        <br/>
+        <strong>DESCRIPTION:</strong> {{item.description}}
+        <br/>
+        <strong>PRICE:</strong> {{item.price_small | currency}}
+    </li>
+</ul>
+
+<br/>
+<br/>

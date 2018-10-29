@@ -6,8 +6,8 @@
 
     MenuCategoriesController.$inject = ['categories'];
     function MenuCategoriesController(categories) {
-        var menuCategories = this;
-        menuCategories.categories = categories;
+        var $ctrl = this;
+        $ctrl.categories = categories;
     }
 
 })();

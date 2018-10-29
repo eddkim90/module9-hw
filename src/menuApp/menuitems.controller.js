@@ -4,16 +4,13 @@
     angular.module('data')
         .controller('MenuItemsController', MenuItemsController);
 
-    MenuItemsController.$inject = ['MenuDataService', '$stateParams', 'categories'];
-    function MenuItemsController(MenuDataService, $stateParams, categories) {
-        var menuItems = this;
-        var categoryName = categories[$stateParams.itemId].short_name;
-        MenuDataService.getItemsForCategory(categoryName)
-            .then(function (response) {
-                menuItems.name = response.category.name;
-                console.log(response);
-                menuItems.menuItems = response.menu_items;
-            })
+    MenuItemsController.$inject = ['items'];
+    function MenuItemsController(items) {
+        var $ctrl = this;
+        console.log(items.menu_items);
+        $ctrl.shortname = items.category.short_name;
+        $ctrl.name = items.category.name;
+        $ctrl.items = items.menu_items;
     }
 
 })();

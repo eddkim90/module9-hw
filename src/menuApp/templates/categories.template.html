@@ -4,5 +4,7 @@
     <h3>CATEGORIES</h3>
     <h5>(  Select the category to display all the items within  )</h5>
 
-    <categories-list categories="menuCategories.categories"></categories-list>
+    <categories-list ng-repeat="menuCategory in menuCategories.categories"
+                     category="menuCategory">
+    </categories-list>
 </div>
